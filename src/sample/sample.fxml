@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <SplitPane dividerPositions="0.2725752508361204" prefHeight="384.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="384.0" prefWidth="147.0" text="在线主机">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="77.0">
+                           <children>
+                              <ListView fx:id="ipListView" layoutY="-1.0" prefHeight="358.0" prefWidth="200.0" />
+                              <ScrollBar layoutX="129.0" orientation="VERTICAL" prefHeight="353.0" prefWidth="16.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="427.0">
+               <children>
+                  <TabPane layoutX="-4.0" prefHeight="374.0" prefWidth="439.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="toTab" text="Untitled Tab 1">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="352.0" prefWidth="439.0">
+                                 <children>
+                                    <TextArea fx:id="textareaSendLog" layoutX="11.0" layoutY="2.0" prefHeight="268.0" prefWidth="420.0" />
+                                    <Button fx:id="sendFile" layoutX="361.0" layoutY="301.0" mnemonicParsing="false" onAction="#sendFile" text="发送" />
+                                    <TextField fx:id="filePath" layoutX="26.0" layoutY="301.0" prefHeight="30.0" prefWidth="240.0" />
+                                    <Button fx:id="selectFile" layoutX="266.0" layoutY="301.0" mnemonicParsing="false" onAction="#selectFile" text="选择文件" />
+                                    <ScrollBar layoutX="419.0" layoutY="2.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="16.0" />
+                                    <ProgressBar fx:id="progressbar" layoutX="11.0" layoutY="270.0" prefHeight="23.0" prefWidth="407.0" progress="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
